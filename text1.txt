@@ -1,0 +1,6 @@
+AngularJS extends HTML with new attributes.
+AngularJS is perfect for Single Page Applications (SPAs).
+
+AngularJS is easy to learn.
+
+Learn AngularJS now!
