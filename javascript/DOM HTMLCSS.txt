@@ -1,0 +1,33 @@
+1>Changing the Value of an Attribute
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<img id="image" src="smiley.gif" width="160" height="120">
+
+<script>
+document.getElementById("image").style.background = "lightgreen";
+</script>
+
+<p>The original image was smiley.gif, but the script changed it to landscape.jpg</p>
+
+</body>
+</html>
+
+2>Using Events
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="id1">My Heading 1</h1>
+
+<button type="button" 
+onclick="document.getElementById('id1').style.fontStyle = 'italic'">
+Click Me!</button>
+
+</body>
+</html>
+
+3>
