@@ -19,7 +19,7 @@
 </html>
 
 
-2>                                                                                  Make input value in uppercase by click event ,onchange()
+2>         Make input value in uppercase by click event ,onchange()
 
 <!DOCTYPE html>
 <html>
