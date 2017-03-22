@@ -19,7 +19,7 @@
 </html>
 
 
-2>                                                                                  Make input value in uppercase, click event
+2>                                                                                  Make input value in uppercase by click event ,onchange()
 
 <!DOCTYPE html>
 <html>
@@ -50,4 +50,56 @@ function myFunction(){
 </body>
 </html> 
 
-3>
+3>                             click events-addEventListener() method,onmouseout(),onmouseover(),onmouseup(),onmousedown().
+
+<!DOCTYPE html>
+<html>
+<body>
+<p>This example uses the onmouseout(),onmouseover(),onmouseup(),onmousedown() click events</p>
+<div onmouseout="mOut(this)" onmouseover="mOver(this)" onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:100%;height:20px;padding:40px;">
+Click Me</div>
+<br><br>
+<p>This example uses the addEventListener() method to add two click events to the same button.</p>
+
+<button id="myBtn">Try it</button>
+
+<script>
+function mDown(obj) {
+    obj.style.backgroundColor = "#1ec5e5";
+    obj.innerHTML = "Release Me";
+}
+function mUp(obj) {
+    obj.style.backgroundColor="#D94A38";
+    obj.innerHTML="Thank You";
+}
+function mOver(id){
+ id.innerHTML="Over"
+ id.style.background="blue";
+}
+function mOut(id){
+ id.innerHTML="Out";
+ id.style.background="lightgreen";
+}
+
+var x = document.getElementById("myBtn");
+x.addEventListener("click", myFunction);
+x.addEventListener("click", someOtherFunction);
+x.addEventListener("mouseover",myFunc);
+function myFunction() {
+    alert ("Hello World!");
+}
+function someOtherFunction() {
+    alert ("This function was also executed!");
+}
+function myFunc(){
+ this.style.fontSize="30px";
+ this.style.background="lightgreen";
+}
+
+</script>
+
+</body>
+</html> 
+
+
