@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html>
 <body>
+<label for="City" class="break">Base of Operations:</label>
+ <select name="city">
+ <option value="" selected>Choose a City</option>
+ <option value="Metropolis">Metropolis</option>
+ <option value="Gotham City">Gotham City</option>
+ <option value="Keystone City">Keystone City</option>
+ <option value="Coast City">Coast City</option>
+ <option value="Star City">Star City</option>
+ </select>
+
+<input list="browsers" name="browser">
+<datalist id="browsers">
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+<input type="submit">
+
+
 <h1>JavaScript Can Validate Input</h1>
 <p>Please input a number between 1 and 50:</p>
 
 <input id="numb">
 <button type="button" onclick="toSubmit()">Submit</button>
 <h5 id="demo"></h5>
+
+<p>A script on this page starts this clock:</p>
+<button onclick="x=setInterval(myFn,1000)" style="background:lightgreen">Start time</button>
+<button onclick="clearInterval(x)" style="background:lightgreen">Stop time</button><br><br>
+
+<button onclick="myVar = setTimeout(myFunction, 3000)">TimeOut</button>
+<button onclick="clearTimeout(myVar)">TimeStop</button>
 
 <script>
     function toSubmit(){
@@ -19,6 +47,13 @@
         }
         document.getElementById("demo").innerHTML=out;
     }
+    function myFn(){
+    var d = new Date();
+    document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+function myFunction() {
+    alert("Hello");
+}
 </script>
 </body>
 </html> 
