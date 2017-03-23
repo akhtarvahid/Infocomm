@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Can Validate Input</h1>
+<p>Please input a number between 1 and 50:</p>
+
+<input id="numb">
+<button type="button" onclick="toSubmit()">Submit</button>
+<h5 id="demo"></h5>
+
+<script>
+    function toSubmit(){
+        var x,out;
+         x = document.getElementById("numb").value;
+        if(isNaN(x) || x<1 || x>50){
+           out = "Wrong input!";
+        }else{
+            out = "Input is OK! Go next"
+        }
+        document.getElementById("demo").innerHTML=out;
+    }
+</script>
+</body>
+</html> 
