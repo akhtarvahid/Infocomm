@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RegularExpression</title>
+</head>
+<body>
+<h3>Regular Expression to match pattern</h3>
+<input type="text" name="data" id="data" style="width: 250px"/>
+<br/><br/>
+<input type="button" value="Process String" onclick="processString()" style="width: 250px"/>
+<br/><br/>
+<textarea id="txtArea" rows="6" cols="34"></textarea>
+<script type="text/javascript">
+	function processString() {
+		document.getElementById("txtArea").value="";
+        var inputString=document.getElementById("data").value;		
+        var result = inputString.match(/\d\d+/g);
+
+        var x=/F/.test(inputString);
+        console.log(x);
+
+        var ree = inputString.match(/H/g);
+        console.log(ree)
+
+        var r = inputString.split(/\d+/g);
+        console.log(r);
+
+        var rs = inputString.split(" ");
+        console.log(rs);
+
+         var rss = inputString.search(/\d+/);
+        console.log(rss);
+
+        var resultForConsole = inputString.replace(/\d+/g,"@@@@");
+        console.log(resultForConsole);
+
+        if (result!=null) {
+        	for (var i =0; i<result.length; i++) {
+        		document.getElementById("txtArea").value+=result[i] + "\r\n";
+        	}
+        } 
+	}
+
+
+</script>
+</body>
+</html>
