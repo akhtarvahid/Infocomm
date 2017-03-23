@@ -33,9 +33,10 @@
 <button onclick="x=setInterval(myFn,1000)" style="background:lightgreen">Start time</button>
 <button onclick="clearInterval(x)" style="background:lightgreen">Stop time</button><br><br>
 
-<button onclick="myVar = setTimeout(myFunction, 3000)">TimeOut</button>
-<button onclick="clearTimeout(myVar)">TimeStop</button>
+<button onclick="myVar = setTimeout(myFunction, 3000)">TimeIn</button>
+<button onclick="clearTimeout(myVar)">TimeOut</button><br><br>
 
+<button type="button" value="Click me to increment" onclick="alert(incrementClickCount());">Click me to increment</button>
 <script>
     function toSubmit(){
         var x,out;
@@ -54,6 +55,12 @@
 function myFunction() {
     alert("Hello");
 }
+ var incrementClickCount=(function(){
+    var clickCount=0;
+    return function(){
+        return ++clickCount;
+    }
+ })();
 </script>
 </body>
 </html> 
