@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Json and ajax</title>
+<style type="text/css">
+  div{
+		background: black;
+		color: white;
+	 }
+ #btn{
+     	background: lightgreen; 
+     	font-size: 20px;
+     }
+body{
+        margin-left: 100px;
+     }
+</style>
+</head>
+<body>
+     <header> 
+     <h1>JSON and AJAX</h1>
+     <button id="btn">Fetch Info</button>
+     </header>
+
+     <div id="animal-info"></div>
+    
+  <script type="text/javascript">
+  	var animals=document.getElementById("animal-info");
+  	var btn = document.getElementById("btn");
+
+  	btn.addEventListener("click",function(){
+       var http = new XMLHttpRequest();
+       http.open("GET","https://learnwebcode.github.io/json-example/animals-3.json");
+       http.onload = function(){
+       	var ourData = JSON.parse(http.responseText);
+       	renderHTML(ourData);
+
+       	console.log(ourData);
+       
+       };
+       http.send();
+  	});
+  	function renderHTML(data){
+  		var htmlString="";
+  		for(i =0; i<data.length; i++){
+          htmlString +="<h4>" + data[i].name + "is a" +data[i].species +" : "+data[i].foods.likes +".</h4>";
+           console.log(data[i].foods.likes);
+  		}
+//       	animals.insertAdjacentHTML('beforeend',htmlString);
+            animals.insertAdjacentHTML('afterend',htmlString);
+       }
+
+  </script>  
+</body> 
+</html>
