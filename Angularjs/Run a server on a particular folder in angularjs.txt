@@ -1,0 +1,17 @@
+npm install -g httpster 
+we can start server from any folder using httpster server without using any nodejs server .... 
+syntex - httpster -d ./dist -p 3000
+
+httpster = server name
+-d       = for directory 
+./dist   = all files inside this directory 
+3000     = optional port number
+
+----Or----
+
+go inside project folder on commond prompt and then type
+
+httpster -p 3000
+
+
+p=port
